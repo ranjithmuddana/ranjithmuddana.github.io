@@ -1,6 +1,6 @@
 ## Usage : ./git-clean-branches.sh 2019-01-01 
 ## Tells whether the branch can be deleted or needs to present
-for branch in `git branch -r --merged | egrep -v "dev*|mas*|HE*" `; 
+for branch in `git branch -r --merged | egrep -v "develop|master|HEAD|release/*" `; 
 do 
 	echo 'START ################################'
 	#Uncomment below line to see commit details
