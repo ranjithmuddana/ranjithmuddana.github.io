@@ -1,6 +1,6 @@
-## Usage : ./git-clean-branches.sh 2019-01-01 
+## Usage : ./git-clean-branches.sh 2019-01-01 "develop|master|HEAD|release/*" 
 ## Tells whether the branch can be deleted or needs to present 
-for branch in `git branch -r --merged | grep -Ev "develop|master|HEAD|release/*" `; 
+for branch in `git branch -r --merged | grep -Ev "$2" `; 
 do 
 	echo 'START ################################'
 	#Uncomment below line to see commit details
