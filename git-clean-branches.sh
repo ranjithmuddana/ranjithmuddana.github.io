@@ -1,5 +1,7 @@
 ## Usage : ./git-clean-branches.sh 2019-01-01 "develop|master|HEAD|release/*" 
 ## Tells whether the branch can be deleted or needs to present 
+## Param($1)-- Used to know whether a commit is present on the branch after this date
+## Param($2)-- Used to filter branches which are necessary
 for branch in `git branch -r --merged | grep -Ev "$2" `; 
 do 
 	echo 'START ################################'
