@@ -1,5 +1,5 @@
 ## Usage : ./git-clean-branches.sh 2019-01-01 
-## Tells whether the branch can be deleted or needs to present
+## Tells whether the branch can be deleted or needs to present 
 for branch in `git branch -r --merged | grep -Ev "develop|master|HEAD|release/*" `; 
 do 
 	echo 'START ################################'
